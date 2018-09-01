@@ -19,6 +19,23 @@ def contest_sort(l):
 
     return max_
 
+def contest_joao_menkes(nums):
+
+    if not nums:
+        return 0
+    
+    nums = set(nums)
+    max_total = 0
+    for x in nums:
+        if (x - 1) not in nums:
+            total = 1
+            while (x + 1) in nums:
+                total += 1
+                x += 1
+            max_total = max(max_total, total)
+            
+    return max_total
+
 def contest_hq(h):
     heapq.heapify(h)
 
