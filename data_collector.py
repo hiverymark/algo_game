@@ -30,9 +30,9 @@ def main(start, stop, num, samples):
     print('Running on funcs: {}'.format(str(funcs.keys())))
     print('with {} samples each'.format(samples))
     print('for ns: {}'.format(str(ns)))
-    for contestant_name in funcs:
-        for n in ns:
-            for run in runs:
+    for run in runs:
+        for contestant_name in funcs:
+            for n in ns:
                 contestant = funcs[contestant_name]
                 if contestant_name in disqualified:
                     continue
